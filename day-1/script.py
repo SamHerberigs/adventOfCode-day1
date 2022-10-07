@@ -1,19 +1,21 @@
 inputFile = open('input.txt', 'r')
 lines = inputFile.readlines()
 
-vorigeDiepte = 0
+vorigeDiepte = int(lines[0])
 aantalKeerDieper = 0
   
 # Strips the newline character
-for line in lines:
+for line in range(lines):
     diepte = int(line)
 
-    if diepte > vorigeDiepte:
+    diepte0 = int(lines[line])
+    diepte3 = int(lines[line + 3])
+
+    if diepte > vorigeDiepte and diepte:
       aantalKeerDieper = aantalKeerDieper + 1
     vorigeDiepte = diepte
-    
-    #print(diepte)
-    #count += 1
-    #print("Line{}: {}".format(count, line.strip()))
 
-print(aantalKeerDieper)
+    print(diepte0)
+    print(diepte3)
+
+#print(aantalKeerDieper)
